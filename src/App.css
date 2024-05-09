@@ -1,6 +1,7 @@
 *{
   margin: 0;padding: 0;box-sizing: border-box;
-  color: black;text-decoration: none;list-style: none;
+  /* color: black; */
+  text-decoration: none;list-style: none;
   font-family: Arial, Helvetica, sans-serif;
 }
 /* -------------------------------navbar css start---------------------------- */
@@ -73,6 +74,10 @@ border-radius: 10px;
     display: block;
   
   }
+}
+.logout{
+  font-size: 25px;
+  position: absolute;
 }
 /* -----------------------------homepage css start------------------------------- */
 .sliderbox{

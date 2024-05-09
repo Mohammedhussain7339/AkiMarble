@@ -5,6 +5,8 @@ import { useNavigate } from 'react-router-dom';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import axios from 'axios';
+import Cookies from 'js-cookie';
+
 
 
 function Login() {
@@ -31,6 +33,10 @@ function Login() {
           localStorage.setItem('userId', response.data.userId);
           localStorage.setItem('firstname', response.data.firstname);
           localStorage.setItem('userRole', response.data.userRole);
+          Cookies.set('token', token, { expires: 1 });
+          Cookies.set('userid',response.data.userId) // 1 day expiration
+          Cookies.set('firtsname',response.data.firstname) // 1 day expiration
+
   
           if (response.data.userRole === 'user') {
             navigate('/');
